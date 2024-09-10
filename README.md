@@ -65,7 +65,7 @@ rtsp_streams:
 启动 FastAPI 服务：
 
 ```
-uvicorn app.main:app --reload --host 0.0.0.0 --port 800
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 服务将在 `http://127.0.0.1:8000` 上运行。host要改为本机IP
