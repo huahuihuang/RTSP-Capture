@@ -4,14 +4,14 @@ from loguru import logger
 import cv2
 from io import BytesIO
 import yaml
-from app.rtsp_reader import RTSPStreamReader
+from rtsp_reader import RTSPStreamReader
 from contextlib import asynccontextmanager
 
 # 配置 Loguru 日志，增加日志文件并控制日志大小和保留天数
 logger.add("logs/rtsp_capture.log", rotation="10 MB", retention="10 days", level="INFO")
 
 # 加载配置文件
-def load_config(config_file: str = 'app/config.yaml') -> dict:
+def load_config(config_file: str = 'config.yaml') -> dict:
     try:
         with open(config_file, 'r') as file:
             config = yaml.safe_load(file)

@@ -105,6 +105,14 @@ curl -X GET "http://127.0.0.1:8000/capture/{{camera_id_1}}"
 curl -X GET "http://127.0.0.1:8000/capture/camera_id_1" -o image.jpg
 ```
 
-## 7 故障排除
+## 7 docker
+
+```sh
+docker build -t rtsp-capture .
+docker run -d -p 8001:8001 rtsp-capture
+docker ps
+```
+
+## 8 故障排除
 
 如果在设置或测试过程中遇到问题，请检查服务生成的日志 (`logs/rtsp_capture.log`) 和测试脚本的控制台输出以查找错误消息。
